@@ -7,8 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     // MARK: Properties
     
@@ -35,9 +34,25 @@ class HomeViewController: UIViewController {
     
     // MARK: Methods
     private func setupUI() {
-        
+        title = "Nerdflix"
+        navigationController?.navigationBar.barTintColor = UIColor(red: 0.23, green: 0.23, blue: 0.23, alpha: 1.00)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationItem.backButtonTitle = ""
     }
     
+    func setupCollections() {
+        collectionViewForYou.dataSource = self
+    }
 
+}
 
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+    }
 }
