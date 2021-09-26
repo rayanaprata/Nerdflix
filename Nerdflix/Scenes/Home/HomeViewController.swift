@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource {
+class HomeViewController: UIViewController {
     
     // MARK: Properties
     
@@ -28,6 +28,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
         
         setupUI()
+        setupCollections()
     }
     
     // MARK: Actions
@@ -43,16 +44,26 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
     
     func setupCollections() {
         collectionViewForYou.dataSource = self
+
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 150, height: 238)
+        collectionViewForYou.setCollectionViewLayout(layout, animated: true)
+        
+        collectionViewForYou.register(UINib(nibName: MovieCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: MovieCollectionViewCell.reuseIdentifier)
     }
 
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.reuseIdentifier, for: indexPath) as? MovieCollectionViewCell else {
+            return UICollectionViewCell.init(frame: .zero)
+        }
+        return cell
     }
 }
