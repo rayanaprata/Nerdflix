@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,16 @@
 		8851FF5626FE8546003BC822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8851FF5426FE8546003BC822 /* LaunchScreen.storyboard */; };
 		8851FF6326FE85D4003BC822 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851FF6126FE85D4003BC822 /* HomeViewController.swift */; };
 		8851FF6426FE85D4003BC822 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8851FF6226FE85D4003BC822 /* HomeViewController.xib */; };
+		88ECCAFC2700D3170034141E /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECCAFB2700D3170034141E /* MovieDetailsViewModel.swift */; };
+		88FA5CA9270087B000A848A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA5CA8270087B000A848A9 /* HomeViewModel.swift */; };
+		88FA5CAB27008D1700A848A9 /* MoviesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA5CAA27008D1700A848A9 /* MoviesModel.swift */; };
+		88FA5CAE2700C6BD00A848A9 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FA5CAC2700C6BD00A848A9 /* MovieDetailsViewController.swift */; };
+		88FA5CAF2700C6BD00A848A9 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88FA5CAD2700C6BD00A848A9 /* MovieDetailsViewController.xib */; };
+		B769968A7ACBC45DB95E8C7E /* Pods_Nerdflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8BBAB5F7D302A9AA07B2D8 /* Pods_Nerdflix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		770D4AD919F604FE5E6DD5A1 /* Pods-Nerdflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdflix.release.xcconfig"; path = "Target Support Files/Pods-Nerdflix/Pods-Nerdflix.release.xcconfig"; sourceTree = "<group>"; };
 		88378C3626FFE3AF0065F3A7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		88378C3726FFE3AF0065F3A7 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		8851FF4626FE8545003BC822 /* Nerdflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +33,13 @@
 		8851FF5726FE8546003BC822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8851FF6126FE85D4003BC822 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8851FF6226FE85D4003BC822 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		88ECCAFB2700D3170034141E /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		88FA5CA8270087B000A848A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		88FA5CAA27008D1700A848A9 /* MoviesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesModel.swift; sourceTree = "<group>"; };
+		88FA5CAC2700C6BD00A848A9 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		88FA5CAD2700C6BD00A848A9 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
+		9F8BBAB5F7D302A9AA07B2D8 /* Pods_Nerdflix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nerdflix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F126A77EF60C6F35374BBD8A /* Pods-Nerdflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdflix.debug.xcconfig"; path = "Target Support Files/Pods-Nerdflix/Pods-Nerdflix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +47,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B769968A7ACBC45DB95E8C7E /* Pods_Nerdflix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		88378C3426FFE3750065F3A7 /* New Group */ = {
+		661259D017812C77AECE8D1F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F8BBAB5F7D302A9AA07B2D8 /* Pods_Nerdflix.framework */,
 			);
-			path = "New Group";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		88378C3526FFE38C0065F3A7 /* Cells */ = {
@@ -60,6 +76,8 @@
 			children = (
 				8851FF4826FE8545003BC822 /* Nerdflix */,
 				8851FF4726FE8545003BC822 /* Products */,
+				9038660E64F603ACDB332EE8 /* Pods */,
+				661259D017812C77AECE8D1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +120,7 @@
 		8851FF5F26FE8580003BC822 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				88378C3426FFE3750065F3A7 /* New Group */,
+				88ECCAFA2700D2ED0034141E /* New Group */,
 				8851FF6826FEA764003BC822 /* MovieDetails */,
 				8851FF6026FE85BD003BC822 /* Home */,
 			);
@@ -116,6 +134,7 @@
 				8851FF6626FEA752003BC822 /* Model */,
 				8851FF6126FE85D4003BC822 /* HomeViewController.swift */,
 				8851FF6226FE85D4003BC822 /* HomeViewController.xib */,
+				88FA5CA8270087B000A848A9 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -123,6 +142,7 @@
 		8851FF6626FEA752003BC822 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				88FA5CAA27008D1700A848A9 /* MoviesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,8 +158,27 @@
 		8851FF6826FEA764003BC822 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				88FA5CAC2700C6BD00A848A9 /* MovieDetailsViewController.swift */,
+				88FA5CAD2700C6BD00A848A9 /* MovieDetailsViewController.xib */,
+				88ECCAFB2700D3170034141E /* MovieDetailsViewModel.swift */,
 			);
 			path = MovieDetails;
+			sourceTree = "<group>";
+		};
+		88ECCAFA2700D2ED0034141E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9038660E64F603ACDB332EE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F126A77EF60C6F35374BBD8A /* Pods-Nerdflix.debug.xcconfig */,
+				770D4AD919F604FE5E6DD5A1 /* Pods-Nerdflix.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8851FF5A26FE8546003BC822 /* Build configuration list for PBXNativeTarget "Nerdflix" */;
 			buildPhases = (
+				A34C6E8267381DE2F1DFE228 /* [CP] Check Pods Manifest.lock */,
 				8851FF4226FE8545003BC822 /* Sources */,
 				8851FF4326FE8545003BC822 /* Frameworks */,
 				8851FF4426FE8545003BC822 /* Resources */,
+				7F00AE8C2236E5653E696EE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,19 +244,66 @@
 				8851FF5326FE8546003BC822 /* Assets.xcassets in Resources */,
 				8851FF6426FE85D4003BC822 /* HomeViewController.xib in Resources */,
 				88378C3926FFE3AF0065F3A7 /* MovieCollectionViewCell.xib in Resources */,
+				88FA5CAF2700C6BD00A848A9 /* MovieDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F00AE8C2236E5653E696EE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nerdflix/Pods-Nerdflix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nerdflix/Pods-Nerdflix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nerdflix/Pods-Nerdflix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A34C6E8267381DE2F1DFE228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nerdflix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8851FF4226FE8545003BC822 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88ECCAFC2700D3170034141E /* MovieDetailsViewModel.swift in Sources */,
 				88378C3826FFE3AF0065F3A7 /* MovieCollectionViewCell.swift in Sources */,
 				8851FF4A26FE8545003BC822 /* AppDelegate.swift in Sources */,
+				88FA5CAE2700C6BD00A848A9 /* MovieDetailsViewController.swift in Sources */,
+				88FA5CAB27008D1700A848A9 /* MoviesModel.swift in Sources */,
 				8851FF6326FE85D4003BC822 /* HomeViewController.swift in Sources */,
+				88FA5CA9270087B000A848A9 /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,11 +439,13 @@
 		};
 		8851FF5B26FE8546003BC822 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F126A77EF60C6F35374BBD8A /* Pods-Nerdflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Nerdflix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,11 +459,13 @@
 		};
 		8851FF5C26FE8546003BC822 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 770D4AD919F604FE5E6DD5A1 /* Pods-Nerdflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Nerdflix/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

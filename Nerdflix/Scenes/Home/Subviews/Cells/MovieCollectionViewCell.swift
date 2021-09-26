@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieCollectionViewCell: UICollectionViewCell {
 
@@ -23,8 +24,18 @@ class MovieCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: Methods
-    func setupUI() {
-        imageMovie.layer.cornerRadius = 5
+    private func setupUI() {
+        imageMovie.layer.cornerRadius = 10
+    }
+    
+    func setupModel(_ movie: MovieItemModel?) {
+        guard let movieModel = movie else {return}
+        labelMovieTitle.text = movieModel.fullTitle
+        
+        guard let urlImage = movie?.image else { return }
+        if let url = URL(string: urlImage) {
+            imageMovie.kf.setImage(with: url)
+        }
     }
 
 }

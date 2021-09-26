@@ -10,9 +10,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     // MARK: Properties
+    private var viewModel: HomeViewModel = HomeViewModel()
     
     // MARK: Outlets
     @IBOutlet weak var collectionViewForYou: UICollectionView!
+    @IBOutlet weak var collectionViewAction: UICollectionView!
+    @IBOutlet weak var collectionViewDrama: UICollectionView!
     
     // MARK: Initialization
     init() {
@@ -29,6 +32,9 @@ class HomeViewController: UIViewController {
         
         setupUI()
         setupCollections()
+        bindEvents()
+        viewModel.getPopularMovies()
+        viewModel.getTopMovies()
     }
     
     // MARK: Actions
@@ -44,26 +50,62 @@ class HomeViewController: UIViewController {
     
     func setupCollections() {
         collectionViewForYou.dataSource = self
+        collectionViewForYou.delegate = self
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 150, height: 238)
+        layout.itemSize = CGSize(width: 115, height: 200)
         collectionViewForYou.setCollectionViewLayout(layout, animated: true)
         
         collectionViewForYou.register(UINib(nibName: MovieCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: MovieCollectionViewCell.reuseIdentifier)
     }
 
+    func bindEvents() {
+        viewModel.updateLayout = { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionViewForYou.reloadData()
+            }
+        }
+    }
+    
+    private func showDetails() {
+        let controller = MovieDetailsViewController("")
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func showMovieDetails(_ id: String?) {
+        guard let idValue = id else {return}
+        let controller = MovieDetailsViewController(idValue)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    
+    @IBAction func handlerButtonSeeDetails(_ sender: Any) {
+        showDetails()
+    }
+    
 }
 
-extension HomeViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let item = viewModel.getMovieAt(indexPath.item)
+        let movieId = item.id
+        showMovieDetails(movieId)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.getMoviesQuantity()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let item = viewModel.getMovieAt(indexPath.item)
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.reuseIdentifier, for: indexPath) as? MovieCollectionViewCell else {
             return UICollectionViewCell.init(frame: .zero)
         }
+        cell.setupModel(item)
         return cell
     }
 }
