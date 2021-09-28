@@ -11,6 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MovieDetailsViewController" customModule="Nerdflix" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="a4l-Q2-z0x" id="9Aa-ai-gTy"/>
+                <outlet property="imageReleaseMovie" destination="Jt9-FU-gKb" id="8eV-js-3XT"/>
+                <outlet property="labelActorsReleaseMovie" destination="yqH-mh-IN7" id="RBh-kX-PWP"/>
+                <outlet property="labelReleaseMovie" destination="XZy-n0-gRI" id="cOH-1z-oNi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

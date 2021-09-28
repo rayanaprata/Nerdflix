@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8800A8092703236000F35B30 /* BubbleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8800A8072703236000F35B30 /* BubbleCollectionViewCell.swift */; };
+		8800A80A2703236000F35B30 /* BubbleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8800A8082703236000F35B30 /* BubbleCollectionViewCell.xib */; };
 		88378C3826FFE3AF0065F3A7 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88378C3626FFE3AF0065F3A7 /* MovieCollectionViewCell.swift */; };
 		88378C3926FFE3AF0065F3A7 /* MovieCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88378C3726FFE3AF0065F3A7 /* MovieCollectionViewCell.xib */; };
 		8851FF4A26FE8545003BC822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8851FF4926FE8545003BC822 /* AppDelegate.swift */; };
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		770D4AD919F604FE5E6DD5A1 /* Pods-Nerdflix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nerdflix.release.xcconfig"; path = "Target Support Files/Pods-Nerdflix/Pods-Nerdflix.release.xcconfig"; sourceTree = "<group>"; };
+		8800A8072703236000F35B30 /* BubbleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleCollectionViewCell.swift; sourceTree = "<group>"; };
+		8800A8082703236000F35B30 /* BubbleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BubbleCollectionViewCell.xib; sourceTree = "<group>"; };
 		88378C3626FFE3AF0065F3A7 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		88378C3726FFE3AF0065F3A7 /* MovieCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCollectionViewCell.xib; sourceTree = "<group>"; };
 		8851FF4626FE8545003BC822 /* Nerdflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nerdflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,23 @@
 				9F8BBAB5F7D302A9AA07B2D8 /* Pods_Nerdflix.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8800A8042703232500F35B30 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				8800A8062703234500F35B30 /* BubbleCell */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		8800A8062703234500F35B30 /* BubbleCell */ = {
+			isa = PBXGroup;
+			children = (
+				8800A8072703236000F35B30 /* BubbleCollectionViewCell.swift */,
+				8800A8082703236000F35B30 /* BubbleCollectionViewCell.xib */,
+			);
+			path = BubbleCell;
 			sourceTree = "<group>";
 		};
 		88378C3526FFE38C0065F3A7 /* Cells */ = {
@@ -157,6 +178,7 @@
 		8851FF6826FEA764003BC822 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
+				8800A8042703232500F35B30 /* Subviews */,
 				88FA5CAC2700C6BD00A848A9 /* MovieDetailsViewController.swift */,
 				88FA5CAD2700C6BD00A848A9 /* MovieDetailsViewController.xib */,
 				88ECCAFB2700D3170034141E /* MovieDetailsViewModel.swift */,
@@ -232,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8800A80A2703236000F35B30 /* BubbleCollectionViewCell.xib in Resources */,
 				8851FF5626FE8546003BC822 /* LaunchScreen.storyboard in Resources */,
 				8851FF5326FE8546003BC822 /* Assets.xcassets in Resources */,
 				8851FF6426FE85D4003BC822 /* HomeViewController.xib in Resources */,
@@ -293,6 +316,7 @@
 				88378C3826FFE3AF0065F3A7 /* MovieCollectionViewCell.swift in Sources */,
 				8851FF4A26FE8545003BC822 /* AppDelegate.swift in Sources */,
 				88FA5CAE2700C6BD00A848A9 /* MovieDetailsViewController.swift in Sources */,
+				8800A8092703236000F35B30 /* BubbleCollectionViewCell.swift in Sources */,
 				88FA5CAB27008D1700A848A9 /* MoviesModel.swift in Sources */,
 				8851FF6326FE85D4003BC822 /* HomeViewController.swift in Sources */,
 				88FA5CA9270087B000A848A9 /* HomeViewModel.swift in Sources */,

@@ -15,6 +15,11 @@ class MovieDetailsViewController: UIViewController {
     private var movieId: String = ""
     
     // MARK: Outlets
+    @IBOutlet weak var imageReleaseMovie: UIImageView!
+    @IBOutlet weak var labelReleaseMovie: UILabel!
+    @IBOutlet weak var labelActorsReleaseMovie: UILabel!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     // MARK: Initialization
     init(_ id: String) {
@@ -40,5 +45,30 @@ class MovieDetailsViewController: UIViewController {
     private func setupUI() {
         title = "Detalhes do filme"
     }
+    
+    private func setupCollection() {
+        collectionView.register(UINib(nibName: BubbleCollectionViewCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: BubbleCollectionViewCell.reuseIdentifier)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: 80, height: 100)
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        
+        collectionView.dataSource = self
+    }
 
+}
+
+extension MovieDetailsViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
+    
 }
