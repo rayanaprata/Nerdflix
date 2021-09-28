@@ -120,7 +120,6 @@
 		8851FF5F26FE8580003BC822 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				88ECCAFA2700D2ED0034141E /* New Group */,
 				8851FF6826FEA764003BC822 /* MovieDetails */,
 				8851FF6026FE85BD003BC822 /* Home */,
 			);
@@ -163,13 +162,6 @@
 				88ECCAFB2700D3170034141E /* MovieDetailsViewModel.swift */,
 			);
 			path = MovieDetails;
-			sourceTree = "<group>";
-		};
-		88ECCAFA2700D2ED0034141E /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9038660E64F603ACDB332EE8 /* Pods */ = {
